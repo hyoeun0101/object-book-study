@@ -9,6 +9,15 @@ public class Bag {
     private Invitation invitation;
     private Ticket ticket;
 
+    /** 이벤트에 당첨되지 않은 관람객은 초대장이 없다. **/
+    public Bag(long amount) {
+        this(null, amount);
+    }
+    public Bag(Invitation invitation, long amount) {
+        this.invitation = invitation;
+        this.amount = amount;
+    }
+
     public boolean hasInvitation() {
         return this.invitation != null;
     }
